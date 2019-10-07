@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+    android:padding="16dp"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TelaPrincipalActivity">
+
+    <RadioGroup
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgTipoDiretorio"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbInterno"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interno" />
+
+        <RadioButton
+            android:id="@+id/rbExterno"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Externo" />
+
+        <RadioButton
+            android:id="@+id/rbPublico"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:text="Download"
+
+            android:layout_height="wrap_content" />
+
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:textSize="32sp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:text="SALVAR"
+        android:ems="6"
+        app:layout_constraintTop_toBottomOf="@id/rgTipoDiretorio"
+        android:id="@+id/btSalvar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_marginTop="16dp"
+        android:id="@+id/etTexto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btSalvar"
+        android:inputType="textCapSentences|textMultiLine"
+
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="wrap_content"
@@ -16,7 +70,7 @@
         android:id="@+id/btSair"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_height="wrap_content" />
 
